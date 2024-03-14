@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS CATEDRATICO (
     Nombre VARCHAR(100)
 );
 
--- Creación de la tabla 'CURSO'
+-- Creación de latabla 'CURSO'
 CREATE TABLE IF NOT EXISTS CURSO (
     idcurso INT AUTO_INCREMENT PRIMARY KEY,
     Nombre VARCHAR(100),
