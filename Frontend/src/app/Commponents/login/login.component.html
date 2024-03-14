@@ -1,50 +1,46 @@
-<section class="vh-100" style="background-color: #508bfc;">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-          <div class="card shadow-2-strong" style="border-radius: 1rem;">
-            <div class="card-body p-5 text-center">
-  
-              <h3 class="mb-5">Inicio de Sesion</h3>
-  
-              <div class="form-outline mb-4">
-                <input type="number" id="typeEmailX-2" class="form-control form-control-lg" [(ngModel)]="this.Temporal_Login.carne">
-                <label class="form-label" for="typeEmailX-2">Registro Academico</label>
-              </div>
-  
-              <div class="form-outline mb-4">
-                <input type="password" id="typePasswordX-2" class="form-control form-control-lg" [(ngModel)]="this.Temporal_Login.pass">
-                <label class="form-label" for="typePasswordX-2">Contraseña</label>
-              </div>
-  
-              <!-- Checkbox -->
-              <div class="row mb-4">
-                <div class="col">
-                    <br>
-                </div>
-  
-                <div class="col">
-                  <!-- Simple link -->
-                  <a href="password">¿Olvido su contraseña?</a>
-                </div>
-              </div>
+<section class="vh-100" style="background-color: #F9E79F;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
 
-            
-              <div class="form-outline mb-4">
-                <button class="btn btn-primary btn-lg btn-block" type="submit" (click)="Prueba()">Iniciar Sesion </button>
-                </div>
-              <div class="text-center">
-                  <p>¿No tienes cuenta? <a href="register">Registrase</a></p>
-              </div>
-            
-              <hr class="my-4">
+            <h3 class="mb-5">Inicio de Sesion</h3>
 
-     
-
-  
+            <div class="form-outline mb-4">
+              <input type="number" id="typeEmailX-2" class="form-control form-control-lg" [(ngModel)]="this.Temporal_Login.carne">
+              <label class="form-label" for="typeEmailX-2">Registro Academico</label>
             </div>
+
+            <div class="form-outline mb-4">
+              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" [(ngModel)]="this.Temporal_Login.pass">
+              <label class="form-label" for="typePasswordX-2">Contraseña</label>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="row mb-4">
+              <div class="col">
+                  <br>
+              </div>
+
+              <div class="col">
+                <!-- Simple link -->
+                <a href="password">¿Olvido su contraseña?</a>
+              </div>
+            </div>
+
+          
+            <div class="form-outline mb-4">
+              <button class="btn btn-warning btn-lg btn-block" type="submit" (click)="Prueba()">Iniciar Sesion </button>
+              </div>
+            <div class="text-center">
+                <p>¿No tienes cuenta? <a href="register">Registrase</a></p>
+            </div>
+          
+            <hr class="my-4">
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
