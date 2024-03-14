@@ -1,0 +1,93 @@
+<section class="vh-100" style="background-color: #FFD3C2;">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #FFBBAB;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home">Bienvenido</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="publicacion">Crear Publicacion</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="perfil">Mi Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="BuscarUsuarios">Buscar Perfil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login">Cerrar Sesión</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container posts-content">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" style="background-color: #FFBBAB;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home">Filtrar por: </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="" style="color: #1E3A58;">Cursos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="" style="color: #1E3A58;">Catedráticos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="" style="color: #1E3A58;">Nombre de Catedrático</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="" style="color: #1E3A58;">Nombre de Curso</a>
+            </li>
+          </ul>
+          <input class="form-control custom-input" type="text" placeholder="Nombre del Curso o Catedrático"
+            aria-label="Curso o Catedrático">
+        </div>
+      </div>
+    </nav>
+
+    <br>
+    <div class="row">
+
+      <div class="col-lg-6" *ngFor="let objeto of datapublicidad">
+        <div class="card mb-4" style="background-color: #FFF5F0;">
+          <div class="card-body">
+            <div class="media mb-3">
+              <div class="media-body ml-3">
+                {{objeto.Nombre}}
+                <div class="text-muted small">{{objeto.fecha}}</div>
+                <div class="text-muted small">{{objeto.Curso}}/{{objeto.Catedratico}}</div>
+              </div>
+            </div>
+
+            <p>
+              {{objeto.Descripcion}}
+            </p>
+
+          </div>
+          <div class="card-footer" style="background-color: #FFDDD0;">
+            <a class="d-inline-block text-muted ml-" (click)="verComentarios(objeto.idpublicacion)">
+              <small class="align-middle" style="color: #1E3A58;">
+                <strong>Comentarios</strong> </small>
+            </a>
+            <div *ngIf="objeto.comentarios">
+              <div *ngFor="let comentario of objeto.comentarios">
+                <p>{{ comentario.Fk_Usuario}}: {{ comentario.comentario }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="form-outline mb-4">
+          <input class="form-control custom-input1" type="text" [(ngModel)]="this.Temporal.comentario" placeholder="Escribe un comentario..." style="background-color: #FFF5F0;">
+          <button type="button" class="btn btn-success btn-block custom-button my-2" (click)="Pcomentario()" style="background-color: #FFBBAB; border-color: #FFBBAB;">Publicar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
