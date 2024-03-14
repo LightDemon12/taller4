@@ -8,6 +8,9 @@ Universidad San Carlos de Guatemala
 Facultad de Ingeniería
 Ingeniería en Ciencias y Sistemas - Escuela de EPS
 Prácticas Iniciales -> Sección F-
+
+![Universidad San Carlos de Guatemala](https://i.ibb.co/grHFfbc/Usac-logo.png)
+
 Integrantes:
 201800979 - Mauricio Alejandro Sagastume Barrios
 202001497 - Antony Stive Fuentes Marroquín
